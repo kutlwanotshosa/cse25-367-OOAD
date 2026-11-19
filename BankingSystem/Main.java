@@ -4,6 +4,7 @@ public class Main {
 
         Customer customer =
                 new Customer(
+                        "C001",
                         "Kutlwano",
                         "Tshosa",
                         "Gaborone");
