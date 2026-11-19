@@ -13,8 +13,8 @@ public class Customer {
                     String firstName,
                     String surname,
                     String address) {
-                        
-        this.customerid = customerID;
+
+        this.customerId = customerID;
         this.firstName = firstName;
         this.surname = surname;
         this.address = address;
