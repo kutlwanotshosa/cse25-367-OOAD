@@ -28,3 +28,4 @@ public class AccountController {
             ((InvestmentAccount) account).payInterest();
         }
     }
+}   
