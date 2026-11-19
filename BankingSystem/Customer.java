@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Customer {
-
+    private String CustomerID;
     private String firstName;
     private String surname;
     private String address;
@@ -9,10 +9,12 @@ public class Customer {
     private ArrayList<Account> accounts =
             new ArrayList<>();
 
-    public Customer(String firstName,
+    public Customer(String customerID.
+                    String firstName,
                     String surname,
                     String address) {
-
+                        
+        this.customerid = customerID;
         this.firstName = firstName;
         this.surname = surname;
         this.address = address;
