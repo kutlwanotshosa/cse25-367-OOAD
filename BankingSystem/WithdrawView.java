@@ -21,7 +21,24 @@ public class WithdrawView extends Application {
         TextField amountField = new TextField();
 
         Button withdrawButton = new Button("Withdraw");
+ withdrawButton.setOnAction(e -> {
+String accountNumber = accountField.getText();
 
+    try {
+
+        double amount = Double.parseDouble(amountField.getText());
+
+        resultLabel.setText(
+            "Withdrawal of BWP " + amount + " successful."
+        );
+
+    } catch(NumberFormatException ex) {
+
+        resultLabel.setText("Enter a valid amount.");
+    }
+});
+
+    
         VBox root = new VBox(10);
         root.setAlignment(Pos.CENTER);
 

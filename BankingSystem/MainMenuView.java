@@ -28,6 +28,44 @@ public class MainMenuView extends Application {
                 interestBtn,
                 exitBtn
         );
+openAccountBtn.setOnAction(e -> {
+    try {
+        new OpenAccountView().start(new Stage());
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+});
+
+depositBtn.setOnAction(e -> {
+    try {
+        new DepositView().start(new Stage());
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+});
+
+withdrawBtn.setOnAction(e -> {
+    try {
+        new WithdrawView().start(new Stage());
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+});
+
+balanceBtn.setOnAction(e -> {
+    try {
+        new BalanceView().start(new Stage());
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+});
+
+exitBtn.setOnAction(e -> {
+    stage.close();
+});
+
+
+
 
         Scene scene = new Scene(root, 400, 300);
 

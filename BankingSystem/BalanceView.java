@@ -18,8 +18,21 @@ public class BalanceView extends Application {
         TextField accountField = new TextField();
 
         Label balanceLabel = new Label("Current Balance: BWP 0.00");
-
+        Label resultLabel = new Label();
         Button searchButton = new Button("Search");
+
+         // Button Action
+        searchButton.setOnAction(e -> {
+
+            String accountNumber = accountField.getText();
+ balanceLabel.setText(
+        "Current Balance for Account "
+        + accountNumber
+        + ": BWP 1000.00"
+    );
+
+});
+
 
         VBox root = new VBox(10);
         root.setAlignment(Pos.CENTER);
@@ -29,7 +42,8 @@ public class BalanceView extends Application {
                 accountLabel,
                 accountField,
                 balanceLabel,
-                searchButton
+                searchButton,
+                resultLabel
         );
 
         Scene scene = new Scene(root, 400, 300);

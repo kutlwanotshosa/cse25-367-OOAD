@@ -19,8 +19,32 @@ public class DepositView extends Application {
 
         Label amountLabel = new Label("Amount:");
         TextField amountField = new TextField();
+        Label resultLabel =new Label();
 
         Button depositButton = new Button("Deposit");
+        depositButton.setOnAction(e -> {
+
+            String accountNumber = accountField.getText();
+
+            try{
+
+                double amount = Double.parseDouble(amountField.getText());
+               if(accountNumber.isEmpty()) {
+                  resultLabel.setText("Please enter an account number.");
+} else{
+    resultLabel.setText(
+        "Deposit of BWP " + amount +
+        " successful into account " +
+        accountNumber
+    );
+}
+} catch(NumberFormatException ex) {
+        resultLabel.setText("Enter a valid amount.");
+    }
+
+});
+
+
 
         VBox root = new VBox(10);
         root.setAlignment(Pos.CENTER);
@@ -31,7 +55,9 @@ public class DepositView extends Application {
                 accountField,
                 amountLabel,
                 amountField,
-                depositButton
+                depositButton,
+                resultLabel
+
         );
 
         Scene scene = new Scene(root, 400, 300);
